@@ -1,0 +1,82 @@
+:root {
+    --bg-color: #F2F9FE;
+    --primary-color: #2A4DD0;
+    --check-color: #4CA154;
+    --dark-color: #111729;
+    --lightdark-color: #223344;
+    --grey-color: #909193;
+}
+/* The switch - the box around the slider */
+.switch {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  display: inline-block;
+  width: 50px; /* Toggle width */
+  height: 24px; /* Toggle height */
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--lightdark-color);
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px; /* Rounded toggle */
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px; /* Size of the knob */
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%; /* Rounded knob */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow for the knob */
+}
+
+/* When the input is checked */
+input:checked + .slider {
+  background-color: var(--lightdark-color);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px); /* Move the knob */
+}
+
+/* Position the moon icon */
+.sun-icon {
+  position: absolute;
+  width: 14px;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  transition: color 0.4s ease;
+}
+
+/* Position the sun icon */
+.moon-icon {
+  position: absolute;
+  width: 14px;
+  top: 50%;
+  right: 5.5px;
+  transform: translateY(-50%);
+  transition: color 0.4s ease;
+}
+
